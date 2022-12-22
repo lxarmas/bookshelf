@@ -1,0 +1,113 @@
+*{
+margin:0;
+top:0;
+
+}
+
+h1{
+text-align: center;
+position: relative;
+color:rgb(108, 17, 17);
+font-weight: bolder;
+
+}
+
+
+body {
+background-color:  rgb(229, 229, 229);
+}
+.book {
+   display:flex;
+   flex-wrap: wrap;
+   width: 60px;
+   background-color: rgb(210, 202, 255);
+   height: 280px;
+   position: relative;
+   margin-left: 0.5px;
+   transform-style: preserve-3d;
+   transform: translateZ(0) rotateY(0);
+   transition: transform 1s;
+ }
+ 
+ .bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  
+    border: 6px  solid;
+    overflow: hidden;
+    background-color: rgba(197, 152, 93, 0.68);
+    background-size: 10px 230px;
+    color:#2e2121;
+  }
+  
+ 
+ 
+ .side {
+    
+  flex-wrap: wrap;
+   position: absolute;
+   border: 4.5px solid rgb(198, 188, 252);
+   border-radius: 4px;
+   font-weight: bold;
+   color: rgb(255, 251, 197);
+   text-align: center;
+   transform-origin: center left;
+ }
+  .spine {
+   display: flex;
+   position: relative;
+   width:50px;
+   height: 275px;
+ 
+    background-image: var(--tartan);
+    transform: rotateY(0deg) translateZ(0px); 
+ }
+  .spine-title {
+   display: flex;
+   margin: 2px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   font-size: 14px;
+   color: rgb(215, 44, 44);
+   writing-mode: vertical-rl;
+   text-orientation: mixed;
+ }
+  .spine-author {
+   position: absolute;
+   color: rgb(215, 44, 44);
+   top: 240px;
+   bottom: 0px;
+  
+   font-size:10px;
+ }
+  .top {
+   display: flex;
+   width: 50px;
+   height: 190px;
+   top: -2px;  /* hmm, why -2 and not 0? */
+   background-image: linear-gradient(90deg, rgb(247, 254, 237) 90%, rgb(104, 28, 28) 10%);
+   background-size: 5px 5px;
+   transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+ }
+  .cover {
+   display:flex;
+   width: 190px;
+   height: 280px;
+   top: 0px;
+   background-color: rgb(198, 186, 227);
+   background-size: contain;
+   background-repeat: round;
+   left: 50px;
+   transform: rotateY(90deg) translateZ(0);
+   transition: transform 1s;
+ }
+  .book:hover {
+   display:flex;
+   z-index: 1;
+   transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px)
+     translateX(-30px);
+ }
+ 
