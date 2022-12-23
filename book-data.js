@@ -2,7 +2,7 @@
 
 
 
- const bookData = [
+ export const bookData = [
   {
     author: ["Burroughs, Edgar Rice"],
     language: "en",
